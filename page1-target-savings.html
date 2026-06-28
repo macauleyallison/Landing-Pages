@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Target Savings Plan — GTI Asset Management</title>
+  <meta name="description" content="The GTI Target Savings Plan helps you build towards your goals. Start with as little as N10,000 and earn up to 15% per annum." />
+
+  <!-- ================================================
+       GA4 — INSERT YOUR TRACKING CODE BELOW
+  ================================================ -->
+  <!-- GA4: Replace G-XXXXXXXXXX with your Property ID
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- ================================================
+       META PIXEL — INSERT YOUR PIXEL CODE BELOW
+  ================================================ -->
+  <!-- Meta Pixel: Replace XXXXXXXXXXXXXXXX with your Pixel ID
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXXX');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  -->
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Page-specific hero accent — savings/aspiration feel */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0; right: 0;
+      height: 60px;
+      background: var(--alice-blue);
+      clip-path: ellipse(55% 100% at 50% 100%);
+      pointer-events: none;
+    }
+    .page-accent-dot {
+      position: absolute;
+      top: 60px; right: -80px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,163,224,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HERO — Headline + Form
+════════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="page-accent-dot"></div>
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- LEFT: Copy -->
+      <div class="hero-copy">
+        <div class="site-logo">
+          <div class="logo-mark"><span>GTI</span></div>
+          <div class="logo-text-wrap">
+            <span class="logo-name">GTIAMTL</span>
+            <span class="logo-sub">Asset Management &amp; Trust</span>
+          </div>
+        </div>
+
+        <span class="hero-label">Target Savings Plan</span>
+        <h1>Save With Purpose.<br>Earn Up to <em>15%</em> Per Annum.</h1>
+
+        <p class="hero-sub">
+          The GTI Target Savings Plan helps you build towards your goals — whether it is school fees,
+          a new home, your business, or your future. Start with as little as N10,000 and watch your money grow.
+        </p>
+
+        <div class="hero-stat-row">
+          <div class="hero-stat">
+            <div class="hero-stat-value">15%</div>
+            <div class="hero-stat-label">Per annum</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">N10,000</div>
+            <div class="hero-stat-label">Minimum to start</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">SEC</div>
+            <div class="hero-stat-label">Regulated</div>
+          </div>
+        </div>
+
+        <button class="scroll-cta" onclick="document.getElementById('benefits').scrollIntoView({behavior:'smooth'})">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          Learn more about this plan
+        </button>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="form-card" id="lead-form-wrap">
+        <p class="form-card-heading">Take the First Step. Fill in Your Details Below.</p>
+
+        <form id="lead-form" novalidate>
+          <!-- Hidden source field -->
+          <input type="hidden" name="Source" value="LP-TargetSavings" />
+
+          <div class="form-group">
+            <label for="fullname">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="fullname" name="Full Name" placeholder="Enter your full name" autocomplete="name" />
+            <span class="error-msg" id="fullname-err">Please enter your full name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="Phone Number" placeholder="080XXXXXXXX or +234XXXXXXXXXX" autocomplete="tel" />
+            <span class="error-msg" id="phone-err">Enter a valid Nigerian phone number.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="Email Address" placeholder="you@example.com" autocomplete="email" />
+            <span class="error-msg" id="email-err">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">How much are you looking to start with? <span aria-hidden="true">*</span></label>
+            <select id="amount" name="Investment Amount">
+              <option value="" disabled selected>Select a range</option>
+              <option value="N10,000 - N49,999">N10,000 – N49,999</option>
+              <option value="N50,000 - N99,999">N50,000 – N99,999</option>
+              <option value="N100,000 - N999,999">N100,000 – N999,999</option>
+              <option value="N1,000,000 - N9,999,999">N1,000,000 – N9,999,999</option>
+              <option value="N10,000,000 and above">N10,000,000 and above</option>
+            </select>
+            <span class="error-msg" id="amount-err">Please select an amount range.</span>
+          </div>
+
+          <button type="submit" class="btn-submit">I Want to Start Saving</button>
+
+          <p class="form-footer-note">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            Your information is secure and will not be shared.
+          </p>
+        </form>
+
+        <!-- Thank-you message (replaces form on submission) -->
+        <div class="thankyou-msg" id="thankyou">
+          <div class="thankyou-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A3E0" stroke-width="2.5">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+          </div>
+          <h3>Thank you.</h3>
+          <p>One of our advisors will be in touch with you shortly.</p>
+        </div>
+      </div>
+
+    </div><!-- /hero-inner -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     BENEFITS
+════════════════════════════════════════════ -->
+<section class="benefits-section" id="benefits">
+  <div class="container">
+    <div class="section-label">Why Choose the Target Savings Plan</div>
+    <h2 class="section-heading">Built Around Your Goals</h2>
+
+    <div class="benefits-grid">
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3>Earn Up to 15% Per Annum</h3>
+        <p>Competitive returns that outpace standard savings accounts and help your money grow meaningfully over time.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3>Start with as Little as N10,000</h3>
+        <p>No large upfront commitment required. Begin your savings journey at a level that works for your current income.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
+          </svg>
+        </div>
+        <h3>Flexible Contributions</h3>
+        <p>Save at your own pace. Increase or adjust your contributions as your financial situation evolves.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>SEC-Regulated</h3>
+        <p>Managed by GTIAMTL, regulated by the Securities and Exchange Commission of Nigeria. Your money is in safe hands.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     TRUST
+════════════════════════════════════════════ -->
+<section class="trust-section">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-icon-wrap">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="trust-content">
+        <p>
+          GTI Asset Management and Trust Limited is regulated by the Securities and Exchange Commission (SEC) of Nigeria.
+          Your investment is managed by a team of professionals committed to growing and protecting your wealth.
+        </p>
+        <span class="trust-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+          SEC Regulated · Nigeria
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-mark"><span>GTI</span></div>
+        <span class="footer-name">GTIAMTL</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 GTI Asset Management and Trust Limited.
+        <div class="footer-sec">Regulated by the Securities and Exchange Commission of Nigeria.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT — Validation + GA4 Events
+════════════════════════════════════════════ -->
+<script>
+(function() {
+  const form    = document.getElementById('lead-form');
+  const wrapper = document.getElementById('lead-form-wrap');
+  const thanks  = document.getElementById('thankyou');
+
+  const PHONE_RE = /^(\+234|0)(70|80|81|90|91)\d{8}$/;
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setError(id, errId, show) {
+    const field = document.getElementById(id);
+    const msg   = document.getElementById(errId);
+    if (show) { field.classList.add('error');    msg.classList.add('show'); }
+    else       { field.classList.remove('error'); msg.classList.remove('show'); }
+  }
+
+  function validate() {
+    let ok = true;
+    const name   = document.getElementById('fullname').value.trim();
+    const phone  = document.getElementById('phone').value.trim().replace(/\s+/g,'');
+    const email  = document.getElementById('email').value.trim();
+    const amount = document.getElementById('amount').value;
+
+    setError('fullname','fullname-err', !name);          if (!name)              ok = false;
+    setError('phone',   'phone-err',   !PHONE_RE.test(phone)); if (!PHONE_RE.test(phone)) ok = false;
+    setError('email',   'email-err',   !EMAIL_RE.test(email)); if (!EMAIL_RE.test(email)) ok = false;
+    setError('amount',  'amount-err',  !amount);         if (!amount)            ok = false;
+
+    return ok;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    // ── GA4 Conversion Event ──────────────────────
+    // Fires when this form is successfully submitted.
+    // Uncomment after GA4 Property ID is inserted above.
+    /*
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', {
+        'event_category': 'form',
+        'event_label':    'LP-TargetSavings',
+        'value':          1
+      });
+    }
+    */
+
+    // ── Meta Pixel Lead Event ─────────────────────
+    /*
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead');
+    }
+    */
+
+    // ── Hide form, show thank-you ─────────────────
+    form.style.display = 'none';
+    thanks.classList.add('show');
+  });
+
+  // Live validation on blur
+  ['fullname','phone','email','amount'].forEach(function(id) {
+    const el = document.getElementById(id);
+    el.addEventListener('blur', validate);
+  });
+})();
+</script>
+
+</body>
+</html>

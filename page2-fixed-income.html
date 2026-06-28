@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixed Income &amp; Treasury Bills — GTI Asset Management</title>
+  <meta name="description" content="GTI Fixed Income and Treasury Bill investments offer guaranteed, predictable returns with flexible tenures. Choose 91, 182, or 364 days." />
+
+  <!-- GA4 — INSERT YOUR TRACKING CODE HERE
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- META PIXEL — INSERT YOUR PIXEL CODE HERE
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXXX');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  -->
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      height: 60px;
+      background: var(--white);
+      clip-path: ellipse(55% 100% at 50% 100%);
+      pointer-events: none;
+    }
+    .tenure-chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .tenure-chip {
+      background: rgba(0,163,224,0.1);
+      border: 1px solid rgba(0,163,224,0.25);
+      color: var(--gti-blue);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="hero-copy">
+        <div class="site-logo">
+          <div class="logo-mark"><span>GTI</span></div>
+          <div class="logo-text-wrap">
+            <span class="logo-name">GTIAMTL</span>
+            <span class="logo-sub">Asset Management &amp; Trust</span>
+          </div>
+        </div>
+
+        <span class="hero-label">Fixed Income &amp; Treasury Bills</span>
+        <h1>Fixed Returns.<br>Zero Guesswork.<br><em>Your Money Works</em> While You Sleep.</h1>
+
+        <p class="hero-sub">
+          GTI Fixed Income and Treasury Bill investments offer guaranteed, predictable returns
+          with flexible tenures. Choose 91, 182, or 364 days and know exactly what you will earn
+          before you invest. Minimum: N100,000.
+        </p>
+
+        <div class="tenure-chips">
+          <span class="tenure-chip">91 Days</span>
+          <span class="tenure-chip">182 Days</span>
+          <span class="tenure-chip">364 Days</span>
+        </div>
+
+        <div class="hero-stat-row">
+          <div class="hero-stat">
+            <div class="hero-stat-value">Guaranteed</div>
+            <div class="hero-stat-label">Fixed returns</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">N100,000</div>
+            <div class="hero-stat-label">Minimum</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">Capital</div>
+            <div class="hero-stat-label">Protected</div>
+          </div>
+        </div>
+
+        <button class="scroll-cta" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          See how it works
+        </button>
+      </div>
+
+      <!-- Form -->
+      <div class="form-card" id="lead-form-wrap">
+        <p class="form-card-heading">Tell Us How Much You Want to Invest.</p>
+
+        <form id="lead-form" novalidate>
+          <input type="hidden" name="Source" value="LP-FixedIncome" />
+
+          <div class="form-group">
+            <label for="fullname">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="fullname" name="Full Name" placeholder="Enter your full name" autocomplete="name" />
+            <span class="error-msg" id="fullname-err">Please enter your full name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="Phone Number" placeholder="080XXXXXXXX or +234XXXXXXXXXX" autocomplete="tel" />
+            <span class="error-msg" id="phone-err">Enter a valid Nigerian phone number.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="Email Address" placeholder="you@example.com" autocomplete="email" />
+            <span class="error-msg" id="email-err">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="product">Product <span aria-hidden="true">*</span></label>
+            <select id="product" name="Product">
+              <option value="" disabled selected>Select a product</option>
+              <option value="Fixed Income">Fixed Income</option>
+              <option value="Treasury Bill">Treasury Bill</option>
+              <option value="Both / Not sure yet">Both / Not sure yet</option>
+            </select>
+            <span class="error-msg" id="product-err">Please select a product.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">How much are you looking to invest? <span aria-hidden="true">*</span></label>
+            <select id="amount" name="Investment Amount">
+              <option value="" disabled selected>Select a range</option>
+              <option value="N100,000 - N499,999">N100,000 – N499,999</option>
+              <option value="N500,000 - N999,999">N500,000 – N999,999</option>
+              <option value="N1,000,000 - N4,999,999">N1,000,000 – N4,999,999</option>
+              <option value="N5,000,000 - N9,999,999">N5,000,000 – N9,999,999</option>
+              <option value="N10,000,000 and above">N10,000,000 and above</option>
+            </select>
+            <span class="error-msg" id="amount-err">Please select an amount range.</span>
+          </div>
+
+          <button type="submit" class="btn-submit">I Want Fixed Returns</button>
+
+          <p class="form-footer-note">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            Your information is secure and will not be shared.
+          </p>
+        </form>
+
+        <div class="thankyou-msg" id="thankyou">
+          <div class="thankyou-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A3E0" stroke-width="2.5">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+          </div>
+          <h3>Thank you.</h3>
+          <p>One of our advisors will be in touch with you shortly.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════ -->
+<section class="how-section" id="how-it-works">
+  <div class="container">
+    <div class="section-label">Simple Process</div>
+    <h2 class="section-heading">How It Works</h2>
+
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <h3>Fill in Your Details</h3>
+        <p>Complete the form above with your name, contact information, product preference, and investment amount.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <h3>Advisor Contacts You</h3>
+        <p>Our advisor reaches out to confirm your product selection and preferred investment tenure.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <h3>Returns Begin Accruing</h3>
+        <p>Your investment is placed and your fixed returns start accruing from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     BENEFITS
+════════════════════════════════════════════ -->
+<section class="benefits-section" id="benefits">
+  <div class="container">
+    <div class="section-label">Why GTI Fixed Income</div>
+    <h2 class="section-heading">Predictable Returns, No Surprises</h2>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3>Fixed, Guaranteed Returns</h3>
+        <p>Know exactly what you will earn before you commit a single naira. No market fluctuation, no uncertainty.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <h3>Flexible Tenures</h3>
+        <p>Choose from 91, 182, or 364 days to match your investment horizon and cash flow needs.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Capital Protection</h3>
+        <p>Your principal is protected for the duration of your chosen tenure, giving you complete peace of mind.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <h3>Minimum N100,000</h3>
+        <p>Accessible entry point for serious savers and investors looking for reliable, structured returns.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M12 3l9 9-9 9"/>
+          </svg>
+        </div>
+        <h3>Regulated by SEC Nigeria</h3>
+        <p>GTIAMTL operates under the full supervision and regulatory framework of the Securities and Exchange Commission.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     TRUST
+════════════════════════════════════════════ -->
+<section class="trust-section">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-icon-wrap">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="trust-content">
+        <p>
+          GTI Asset Management and Trust Limited is regulated by the Securities and Exchange Commission (SEC) of Nigeria.
+          Fixed Income and Treasury Bill investments offer capital protection and guaranteed returns.
+        </p>
+        <span class="trust-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+          SEC Regulated · Nigeria
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-mark"><span>GTI</span></div>
+        <span class="footer-name">GTIAMTL</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 GTI Asset Management and Trust Limited.
+        <div class="footer-sec">Regulated by the Securities and Exchange Commission of Nigeria.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const form   = document.getElementById('lead-form');
+  const thanks = document.getElementById('thankyou');
+  const PHONE_RE = /^(\+234|0)(70|80|81|90|91)\d{8}$/;
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setError(id, errId, show) {
+    const f = document.getElementById(id), m = document.getElementById(errId);
+    if (show) { f.classList.add('error'); m.classList.add('show'); }
+    else       { f.classList.remove('error'); m.classList.remove('show'); }
+  }
+
+  function validate() {
+    let ok = true;
+    const name    = document.getElementById('fullname').value.trim();
+    const phone   = document.getElementById('phone').value.trim().replace(/\s+/g,'');
+    const email   = document.getElementById('email').value.trim();
+    const product = document.getElementById('product').value;
+    const amount  = document.getElementById('amount').value;
+
+    setError('fullname','fullname-err',!name);                    if(!name)                   ok=false;
+    setError('phone',   'phone-err',  !PHONE_RE.test(phone));     if(!PHONE_RE.test(phone))   ok=false;
+    setError('email',   'email-err',  !EMAIL_RE.test(email));     if(!EMAIL_RE.test(email))   ok=false;
+    setError('product', 'product-err',!product);                  if(!product)                ok=false;
+    setError('amount',  'amount-err', !amount);                   if(!amount)                 ok=false;
+    return ok;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+    // GA4: gtag('event','generate_lead',{'event_label':'LP-FixedIncome','value':1});
+    // Pixel: fbq('track','Lead');
+    form.style.display = 'none';
+    thanks.classList.add('show');
+  });
+
+  ['fullname','phone','email','product','amount'].forEach(function(id) {
+    document.getElementById(id).addEventListener('blur', validate);
+  });
+})();
+</script>
+
+</body>
+</html>

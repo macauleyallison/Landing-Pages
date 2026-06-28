@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mutual Funds — GTI Asset Management</title>
+  <meta name="description" content="GTI Mutual Funds give you access to diversified, professionally managed portfolios. Balance Fund and Money Market Fund. Start from 5,000 units." />
+
+  <!-- GA4 — INSERT YOUR TRACKING CODE HERE
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- META PIXEL — INSERT YOUR PIXEL CODE HERE
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXXX');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  -->
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      height: 60px;
+      background: var(--white);
+      clip-path: ellipse(55% 100% at 50% 100%);
+      pointer-events: none;
+    }
+    /* Mutual Funds page gets a dedicated product cards section in hero copy area */
+    .funds-section {
+      background: var(--white);
+      padding: 80px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="hero-copy">
+        <div class="site-logo">
+          <div class="logo-mark"><span>GTI</span></div>
+          <div class="logo-text-wrap">
+            <span class="logo-name">GTIAMTL</span>
+            <span class="logo-sub">Asset Management &amp; Trust</span>
+          </div>
+        </div>
+
+        <span class="hero-label">Mutual Funds</span>
+        <h1>Let the Experts<br><em>Grow Your Money</em><br>for You.</h1>
+
+        <p class="hero-sub">
+          GTI Mutual Funds give you access to diversified, professionally managed portfolios.
+          Whether you want stability or long-term growth, we have a fund for your goals.
+          Start from as little as 5,000 units and begin enjoying the benefits of compounding interest.
+        </p>
+
+        <div class="hero-stat-row">
+          <div class="hero-stat">
+            <div class="hero-stat-value">5,000</div>
+            <div class="hero-stat-label">Units minimum</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">2 Funds</div>
+            <div class="hero-stat-label">To choose from</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">SEC</div>
+            <div class="hero-stat-label">Regulated</div>
+          </div>
+        </div>
+
+        <button class="scroll-cta" onclick="document.getElementById('funds-detail').scrollIntoView({behavior:'smooth'})">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          Compare both funds
+        </button>
+      </div>
+
+      <!-- Form -->
+      <div class="form-card" id="lead-form-wrap">
+        <p class="form-card-heading">Which Fund Is Right for You? Let Us Help You Decide.</p>
+
+        <form id="lead-form" novalidate>
+          <input type="hidden" name="Source" value="LP-MutualFunds" />
+
+          <div class="form-group">
+            <label for="fullname">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="fullname" name="Full Name" placeholder="Enter your full name" autocomplete="name" />
+            <span class="error-msg" id="fullname-err">Please enter your full name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="Phone Number" placeholder="080XXXXXXXX or +234XXXXXXXXXX" autocomplete="tel" />
+            <span class="error-msg" id="phone-err">Enter a valid Nigerian phone number.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="Email Address" placeholder="you@example.com" autocomplete="email" />
+            <span class="error-msg" id="email-err">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="fund">Fund <span aria-hidden="true">*</span></label>
+            <select id="fund" name="Fund">
+              <option value="" disabled selected>Select a fund</option>
+              <option value="Balance Fund">Balance Fund</option>
+              <option value="Money Market Fund">Money Market Fund</option>
+              <option value="Both / Not sure yet">Both / Not sure yet</option>
+            </select>
+            <span class="error-msg" id="fund-err">Please select a fund.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="units">How many units are you looking to start with? <span aria-hidden="true">*</span></label>
+            <select id="units" name="Units">
+              <option value="" disabled selected>Select a range</option>
+              <option value="5,000 - 24,999 units">5,000 – 24,999 units</option>
+              <option value="25,000 - 99,999 units">25,000 – 99,999 units</option>
+              <option value="100,000 - 499,999 units">100,000 – 499,999 units</option>
+              <option value="500,000 - 999,999 units">500,000 – 999,999 units</option>
+              <option value="1,000,000 units and above">1,000,000 units and above</option>
+            </select>
+            <span class="error-msg" id="units-err">Please select a unit range.</span>
+          </div>
+
+          <button type="submit" class="btn-submit">I Want to Start Investing</button>
+
+          <p class="form-footer-note">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            Your information is secure and will not be shared.
+          </p>
+        </form>
+
+        <div class="thankyou-msg" id="thankyou">
+          <div class="thankyou-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A3E0" stroke-width="2.5">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+          </div>
+          <h3>Thank you.</h3>
+          <p>One of our advisors will be in touch with you shortly.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FUND COMPARISON CARDS -->
+<section class="funds-section" id="funds-detail">
+  <div class="container">
+    <div class="section-label">Our Funds</div>
+    <h2 class="section-heading">Two Funds. One Purpose: Growing Your Wealth.</h2>
+
+    <div class="product-cards-row">
+      <div class="product-card">
+        <span class="product-card-tag">Growth-Oriented</span>
+        <h3>Balance Fund</h3>
+        <p>
+          Diversified across equities, fixed income, and money market instruments.
+          Designed for investors seeking long-term capital growth with a balanced
+          risk approach. Unit price reflects market performance.
+        </p>
+        <div class="product-card-min">
+          Minimum entry: <strong>5,000 units</strong>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-card-tag">Stable &amp; Liquid</span>
+        <h3>Money Market Fund</h3>
+        <p>
+          Short-term, liquid, and stable. Ideal for investors who want accessibility
+          and predictability. Priced at a fixed N1.00 per unit, making it easy to
+          track and plan your returns.
+        </p>
+        <div class="product-card-min">
+          Minimum entry: <strong>5,000 units (N5,000)</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BENEFITS -->
+<section class="benefits-section" id="benefits">
+  <div class="container">
+    <div class="section-label">Why GTI Mutual Funds</div>
+    <h2 class="section-heading">Professional Management, Accessible to All</h2>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3>Professional Fund Management</h3>
+        <p>GTIAMTL's investment team actively manages your fund, making decisions so you don't have to.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <h3>Diversification Built In</h3>
+        <p>Your money is spread across multiple instruments, reducing risk without requiring financial expertise on your part.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3>Low Entry Point</h3>
+        <p>Start from just 5,000 units — one of the most accessible entry points in the Nigerian managed fund market.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Regulated by SEC Nigeria</h3>
+        <p>Both funds are operated under the full regulatory framework of the Securities and Exchange Commission of Nigeria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TRUST -->
+<section class="trust-section">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-icon-wrap">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="trust-content">
+        <p>
+          GTI Asset Management and Trust Limited is SEC-regulated with a track record of managing pooled investment
+          funds for retail and institutional investors across Nigeria.
+        </p>
+        <span class="trust-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+          SEC Regulated · Nigeria
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-mark"><span>GTI</span></div>
+        <span class="footer-name">GTIAMTL</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 GTI Asset Management and Trust Limited.
+        <div class="footer-sec">Regulated by the Securities and Exchange Commission of Nigeria.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const form   = document.getElementById('lead-form');
+  const thanks = document.getElementById('thankyou');
+  const PHONE_RE = /^(\+234|0)(70|80|81|90|91)\d{8}$/;
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setError(id, errId, show) {
+    const f = document.getElementById(id), m = document.getElementById(errId);
+    if (show) { f.classList.add('error'); m.classList.add('show'); }
+    else       { f.classList.remove('error'); m.classList.remove('show'); }
+  }
+
+  function validate() {
+    let ok = true;
+    const name  = document.getElementById('fullname').value.trim();
+    const phone = document.getElementById('phone').value.trim().replace(/\s+/g,'');
+    const email = document.getElementById('email').value.trim();
+    const fund  = document.getElementById('fund').value;
+    const units = document.getElementById('units').value;
+
+    setError('fullname','fullname-err',!name);                 if(!name)                 ok=false;
+    setError('phone',   'phone-err',  !PHONE_RE.test(phone)); if(!PHONE_RE.test(phone)) ok=false;
+    setError('email',   'email-err',  !EMAIL_RE.test(email)); if(!EMAIL_RE.test(email)) ok=false;
+    setError('fund',    'fund-err',   !fund);                  if(!fund)                 ok=false;
+    setError('units',   'units-err',  !units);                 if(!units)                ok=false;
+    return ok;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+    // GA4: gtag('event','generate_lead',{'event_label':'LP-MutualFunds','value':1});
+    // Pixel: fbq('track','Lead');
+    form.style.display = 'none';
+    thanks.classList.add('show');
+  });
+
+  ['fullname','phone','email','fund','units'].forEach(function(id) {
+    document.getElementById(id).addEventListener('blur', validate);
+  });
+})();
+</script>
+
+</body>
+</html>
